@@ -7,7 +7,6 @@ import {
     Moon,
     Package,
     Package2,
-    Search,
     ShoppingCart,
     Sun,
     Users,
@@ -18,7 +17,6 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
-  import { Input } from "@/components/ui/input"
   import { Badge } from "@/components/ui/badge"  
 import { useTheme } from "./ThemeProvider"
 
