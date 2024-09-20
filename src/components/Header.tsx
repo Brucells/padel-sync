@@ -1,14 +1,17 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import {
+  Camera,
+  ChartColumnBig,
+  ChartSpline,
+  Database,
+    Diameter,
+    Dribbble,
     Home,
-    LineChart,
     Menu,
     Moon,
-    Package,
-    Package2,
-    ShoppingCart,
     Sun,
+    User,
     Users,
   } from "lucide-react"
   import {
@@ -43,8 +46,8 @@ function Header() {
                   href="#"
                   className="flex items-center gap-2 text-lg font-semibold"
                 >
-                  <Package2 className="h-6 w-6" />
-                  <span className="sr-only text-primary">PadelSync</span>
+                  <Diameter className="h-6 w-6" />
+                  <span className="">PadelSync</span>
                 </a>
                 <a
                   href="#"
@@ -57,32 +60,53 @@ function Header() {
                   href="#"
                   className="mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-muted px-3 py-2 text-foreground hover:text-foreground"
                 >
-                  <ShoppingCart className="h-5 w-5" />
-                  Orders
-                  <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
-                    6
-                  </Badge>
+                  <Dribbble className="h-5 w-5" />
+                  Match
                 </a>
                 <a
                   href="#"
                   className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
                 >
-                  <Package className="h-5 w-5" />
-                  Products
+                  <ChartColumnBig className="h-5 w-5" />
+                  Statistiques
+                </a>
+                <a
+                  href="#"
+                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
+                >
+                  <ChartSpline className="h-5 w-5" />
+                  Progression
+                </a>
+                <a
+                  href="#"
+                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
+                >
+                  <Camera className="h-5 w-5" />
+                  Videos
+                </a>
+                <a
+                  href="#"
+                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
+                >
+                  <Database className="h-5 w-5" />
+                  Données
                 </a>
                 <a
                   href="#"
                   className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
                 >
                   <Users className="h-5 w-5" />
-                  Customers
+                  Coéquipiers
+                  <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
+                    3
+                  </Badge>
                 </a>
                 <a
                   href="#"
                   className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
                 >
-                  <LineChart className="h-5 w-5" />
-                  Analytics
+                  <User className="h-5 w-5" />
+                  Profil
                 </a>
               </nav>
               
