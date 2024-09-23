@@ -1,0 +1,16 @@
+{
+    "name": "PadelSync",
+    "short_name": "PadelSync",
+    "description": "My padel analytics app",
+    "start_url": "/padel-sync/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#165d30",
+    "icons": [
+        {
+            "src": "icon.png",
+            "size": "24x24",
+            "type": "image/png"
+        }
+    ]
+}
