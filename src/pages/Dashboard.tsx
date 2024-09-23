@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Diameter, DollarSign, Dribbble, Home, Timer, TrendingUp } from "lucide-react";
+import { Diameter, DollarSign, Dribbble, Home, Timer, TrendingDown, TrendingUp, Trophy } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Calendar } from "@/components/ui/calendar";
 
 function Dashboard() {
   return (
@@ -15,7 +16,7 @@ function Dashboard() {
 
 
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-3 xl:grid-cols-4 2xl:grid-cols-6">
 
 
 
@@ -29,6 +30,43 @@ function Dashboard() {
           <CardContent>
             <div className="text-2xl font-bold">12</div>
 
+          </CardContent>
+        </Card>
+
+        <Card x-chunk="dashboard-01-chunk-3">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Temps de jeu</CardTitle>
+            <Timer className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="flex w-full items-center gap-2">
+              <div className="grid flex-1 auto-rows-min gap-0.5">
+                <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
+                  2
+                  <span className="text-sm font-normal text-muted-foreground">
+                    jrs
+                  </span>
+                </div>
+              </div>
+              <Separator orientation="vertical" className="mx-0 h-8 w-px" />
+              <div className="grid flex-1 auto-rows-min gap-0.5">
+                <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
+                  18
+                  <span className="text-sm font-normal text-muted-foreground">
+                    hrs
+                  </span>
+                </div>
+              </div>
+              <Separator orientation="vertical" className="mx-0 h-8 w-px" />
+              <div className="grid flex-1 auto-rows-min gap-0.5">
+                <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
+                  14
+                  <span className="text-sm font-normal text-muted-foreground">
+                    min
+                  </span>
+                </div>
+              </div>
+            </div>
           </CardContent>
         </Card>
 
@@ -48,41 +86,19 @@ function Dashboard() {
           </CardContent>
         </Card>
 
-        <Card x-chunk="dashboard-01-chunk-3">
+        <Card x-chunk="dashboard-01-chunk-2">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Temps de jeu</CardTitle>
-            <Timer className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium flex flex-row items-center">
+              Winrate
+              <TrendingDown className="ml-2 h-4 w-4 text-destructive" />
+            </CardTitle>
+            <Trophy className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="flex w-full items-center gap-2">
-              <div className="grid flex-1 auto-rows-min gap-0.5">
-                <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
-                  2
-                  <span className="text-sm font-normal text-muted-foreground">
-                    jrs
-                  </span>
-                </div>
-              </div>
-              <Separator orientation="vertical" className="mx-2 h-10 w-px" />
-              <div className="grid flex-1 auto-rows-min gap-0.5">
-                <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
-                  18
-                  <span className="text-sm font-normal text-muted-foreground">
-                    hrs
-                  </span>
-                </div>
-              </div>
-              <Separator orientation="vertical" className="mx-2 h-10 w-px" />
-              <div className="grid flex-1 auto-rows-min gap-0.5">
-                <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
-                  14
-                  <span className="text-sm font-normal text-muted-foreground">
-                    min
-                  </span>
-                </div>
-              </div>
-            </div>
-
+            <div className="text-2xl font-bold">67%</div>
+            <p className="text-xs text-muted-foreground">
+              -12% par rapport au mois dernier
+            </p>
           </CardContent>
         </Card>
 
@@ -120,6 +136,46 @@ function Dashboard() {
         </Card>
 
 
+      </div>
+
+
+      <div className="grid grid-rows-4 grid-flow-col gap-4 auto-cols-max">
+        <Card className="row-span-2 bg-primary">
+          
+        </Card>
+        <Card className="row-span-2 bg-secondary">
+          Hi
+        </Card>
+        <Card className="row-span-4">
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium flex flex-row items-center">
+              Derniers matchs
+            </CardTitle>
+            <Dribbble className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent className="flex flex-row">
+            <Calendar
+              mode="multiple"
+              selected={[
+                new Date(2024, 8, 4),
+                new Date(2024, 8, 13),
+                new Date(2024, 8, 17),
+              ]}
+              modifiers={{
+                loose: [
+                  new Date(2024, 8, 27)
+                ],
+                soon: [
+                  new Date(2024, 9, 4)
+                ]
+              }}
+              modifiersClassNames={{
+                loose: "bg-destructive rounded-full",
+                soon: "bg-blue-200 rounded-full"
+              }}
+            />
+          </CardContent>
+        </Card>
       </div>
 
 
